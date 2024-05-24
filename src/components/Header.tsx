@@ -14,7 +14,7 @@ const Header = () => {
             />
           </div>
 
-          <div className="relative flex items-center left-2 ">
+          <div className="relative content-end flex items-center left-2 ">
             <input
               type="text"
               placeholder="Search this site..."
