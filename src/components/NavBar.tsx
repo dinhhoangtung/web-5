@@ -45,6 +45,7 @@ const NavBar = () => {
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 aria-hidden="true"
+                aria-expanded="true"
               >
                 <path
                   fillRule="evenodd"
