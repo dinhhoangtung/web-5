@@ -175,7 +175,7 @@ const Content = () => {
     <>
       <div className="">
         <div className="container mx-auto ">
-          <div className=" grid grid-cols-3 gap-5 ">
+          <div className=" grid grid-cols-4 gap-5 ">
             {/* left col */}
             <div className=" h-auto flex flex-col col-span-1 ">
               <Card title="HƯỚNG DẪN - THỦ THUẬT" list={transformedData} />
@@ -183,7 +183,7 @@ const Content = () => {
               <Card title="LIÊN KẾT WEBSITE" list={transformedData3} />
             </div>
             {/* right */}
-            <div className="col-span-2 h-auto flex flex-col gap-5">
+            <div className="col-span-3 h-auto flex flex-col gap-5">
               <Card2
                 titleNew="PHÒNG DỮ LIỆU & CNTT"
                 listNew={MOCK_DATA_Card2}

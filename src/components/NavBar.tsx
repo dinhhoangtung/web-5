@@ -61,14 +61,14 @@ const NavBar = () => {
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="menu-button"
-            tabindex="-1"
+            tabIndex={-1}
           >
             <div className="py-1" role="none">
               <a
                 href="#"
                 className="text-gray-700 block px-4 py-2 text-sm"
                 role="menuitem"
-                tabindex="-1"
+                tabIndex={-1}
                 id="menu-item-0"
               >
                 Account settings
@@ -77,7 +77,7 @@ const NavBar = () => {
                 href="#"
                 className="text-gray-700 block px-4 py-2 text-sm"
                 role="menuitem"
-                tabindex="-1"
+                tabIndex={-1}
                 id="menu-item-1"
               >
                 Support
@@ -86,7 +86,7 @@ const NavBar = () => {
                 href="#"
                 className="text-gray-700 block px-4 py-2 text-sm"
                 role="menuitem"
-                tabindex="-1"
+                tabIndex={-1}
                 id="menu-item-2"
               >
                 License
@@ -96,7 +96,7 @@ const NavBar = () => {
                   type="submit"
                   className="text-gray-700 block w-full px-4 py-2 text-left text-sm"
                   role="menuitem"
-                  tabindex="-1"
+                  tabIndex={-1}
                   id="menu-item-3"
                 >
                   Sign out
