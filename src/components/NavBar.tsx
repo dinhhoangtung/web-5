@@ -8,7 +8,6 @@ const Item_List = [
   {
     id: 2,
     title: "Giới thiệu ",
-    link: "/",
     submenuList: [
       {
         id: 20,
@@ -30,7 +29,6 @@ const Item_List = [
   {
     id: 3,
     title: "Thông tin- Thông báo",
-    link: "/",
     submenuList: [
       {
         id: 12,
