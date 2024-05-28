@@ -108,7 +108,7 @@ const MOCK_DATA_3 = [
 const MOCK_DATA_Card2 = [
   {
     id: 1,
-    img: "abc",
+    img: "https://phongdl.uit.edu.vn/sites/phongdl/files/styles/thumb_bv/public/default_images/no-img.png?itok=Aqt6OeFi",
     nameNews: "Sử dụng OpenVPN",
     link: "https://phongdl.uit.edu.vn/su-dung-openvpn",
     date: "18-07-2021",
@@ -117,7 +117,7 @@ const MOCK_DATA_Card2 = [
   },
   {
     id: 2,
-    img: "abc",
+    img: "https://phongdl.uit.edu.vn/sites/phongdl/files/styles/thumb_bv/public/uploads/images/thumbs/201705/1605_image002.png?itok=b_E5LyZI",
     nameNews: "Hiểu rõ hơn về mã độc tống tiền Wanna.Cry  ",
     link: "https://phongdl.uit.edu.vn/sua-loi-windows-10-bang-1-cu-click-chuot-voi-fixwin",
     date: "18-07-2021",
@@ -126,7 +126,7 @@ const MOCK_DATA_Card2 = [
   },
   {
     id: 3,
-    img: "bcd",
+    img: "https://phongdl.uit.edu.vn/sites/phongdl/files/styles/thumb_bv/public/uploads/images/thumbs/201606/wifi1.png?itok=WKrGknLR",
     nameNews: "Kết nối wifi sử dụng tài khoản chứng thực UIT trên Windows 7 ",
     link: "https://phongdl.uit.edu.vn/su-dung-he-thong-microsoft-azure-thay-cho-microsoft-imagine-dreamspark-cu",
     date: "18-07-2021",
@@ -135,7 +135,7 @@ const MOCK_DATA_Card2 = [
   },
   {
     id: 4,
-    img: "xyz",
+    img: "https://phongdl.uit.edu.vn/sites/phongdl/files/styles/thumb_bv/public/uploads/images/thumbs/201606/google-sites-image.png?itok=8MD5hwBO",
     nameNews: "Hướng dẫn tạo website trên Google sites",
     link: "https://phongdl.uit.edu.vn/cach-cap-nhat-windows-10-len-windows-10-may-2019-1903",
     date: "18-07-2021",
@@ -144,7 +144,7 @@ const MOCK_DATA_Card2 = [
   },
   {
     id: 5,
-    img: "def",
+    img: "https://phongdl.uit.edu.vn/sites/phongdl/files/styles/thumb_bv/public/uploads/images/thumbs/201606/moodle.jpg?itok=3ESy3pnd",
     nameNews: "Hướng dẫn sử dụng website môn học (moodle)",
     link: "https://phongdl.uit.edu.vn/ket-noi-wifi-uit-tren-dien-thoai-android",
     date: "18-07-2021",

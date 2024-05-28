@@ -23,7 +23,7 @@ const Card2 = (props: Card2Props) => {
           <li key={news.id}>
             <div className="flex gap-10 items-center">
               <div>
-                <div>{news.img}</div>
+                <img src={news.img} alt="" />
               </div>
               <div className="gap-10 border-b-2">
                 <div>
