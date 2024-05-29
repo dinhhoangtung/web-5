@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const images = [
   {
-    src: "https://i.imgur.com/MyZfu1J.jpg",
+    src: "https://phongdl.uit.edu.vn/sites/phongdl/files/slider/duc-2931.jpg",
   },
   {
     src: "https://i.imgur.com/zv52vYA.jpg",
@@ -26,7 +26,7 @@ const Slideshow: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex  items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col  items-center justify-center min-h-screen bg-gray-100">
       <div className="relative w-full max-w-2xl">
         {images.map((image, index) => (
           <div
@@ -35,27 +35,23 @@ const Slideshow: React.FC = () => {
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
           >
-            <div className="numbertext absolute top-0 left-0 m-2 text-white bg-black bg-opacity-50 p-1 rounded">
-              {index + 1} / {images.length}
-            </div>
             <img
               src={image.src}
               alt={`Slide ${index + 1}`}
               className="w-full h-auto rounded-lg"
             />
+            <div className="flex justify-center mt-4">
+              {images.map((_, index) => (
+                <span
+                  key={index}
+                  className={`dot h-3 w-3 mx-1 rounded-full cursor-pointer ${
+                    index === currentIndex ? "bg-blue-500" : "bg-gray-300"
+                  }`}
+                  onClick={() => setCurrentIndex(index)}
+                ></span>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
-
-      <div className="flex justify-center mt-4">
-        {images.map((_, index) => (
-          <span
-            key={index}
-            className={`dot h-3 w-3 mx-1 rounded-full cursor-pointer ${
-              index === currentIndex ? "bg-blue-500" : "bg-gray-300"
-            }`}
-            onClick={() => setCurrentIndex(index)}
-          ></span>
         ))}
       </div>
     </div>

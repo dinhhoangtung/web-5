@@ -12,9 +12,9 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className=" p-5 flex items-center justify-center bg-gray-100 border-slate-950">
+    <div className=" p-5 flex items-center justify-center  border-slate-950">
       <div className="bg-white border-slate-950 rounded-lg shadow-lg w-96">
-        <div className="border flex p-3">
+        <div className="border flex p-3 bg-gradient-to-r from-slate-300 to-white">
           <h2 className="pl-3 text-2xl font-bold  text-blue-500">Đăng nhập</h2>
         </div>
         <form onSubmit={handleSubmit} className="p-8">
