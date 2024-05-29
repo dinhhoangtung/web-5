@@ -3,26 +3,26 @@ const Item_List = [
   {
     id: 1,
     title: "Trang chủ",
-    link: "/",
+    link: "/123",
   },
   {
     id: 2,
     title: "Giới thiệu ",
-    link: "/",
+    link: "/gioi-thieu",
     submenuList: [
       {
         id: 20,
-        title: "Thông tin- Thông báo",
+        title: "Chức năng ",
         link: "/",
       },
       {
         id: 21,
-        title: "Tin tức CNTT",
+        title: "Nhiệm vụ",
         link: "/",
       },
       {
         id: 22,
-        title: "Hướng dẫn ",
+        title: "Nhân sự ",
         link: "/",
       },
     ],
@@ -30,7 +30,7 @@ const Item_List = [
   {
     id: 3,
     title: "Thông tin- Thông báo",
-    link: "/",
+    link: "/thong-tin",
     submenuList: [
       {
         id: 12,
