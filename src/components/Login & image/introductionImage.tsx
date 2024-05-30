@@ -5,13 +5,16 @@ const images = [
     src: "https://phongdl.uit.edu.vn/sites/phongdl/files/slider/duc-2931.jpg",
   },
   {
-    src: "https://i.imgur.com/zv52vYA.jpg",
+    src: "https://phongdl.uit.edu.vn/sites/phongdl/files/slider/duc-2923.jpg",
   },
   {
-    src: "https://i.imgur.com/vjmPgaH.jpg",
+    src: "https://phongdl.uit.edu.vn/sites/phongdl/files/slider/duc-2952.jpg",
   },
   {
-    src: "https://i.imgur.com/0X2P272.jpg",
+    src: "https://phongdl.uit.edu.vn/sites/phongdl/files/slider/duc-2913.jpg",
+  },
+  {
+    src: "https://phongdl.uit.edu.vn/sites/phongdl/files/slider/duc-2911.jpg",
   },
 ];
 
@@ -26,8 +29,8 @@ const Slideshow: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col  items-center justify-center min-h-screen bg-gray-100">
-      <div className="relative w-full max-w-2xl">
+    <div className="flex flex-col  content-center min-h-screen bg-gray-100">
+      <div className="relative w-full max-w-2xl ">
         {images.map((image, index) => (
           <div
             key={index}
@@ -40,7 +43,7 @@ const Slideshow: React.FC = () => {
               alt={`Slide ${index + 1}`}
               className="w-full h-auto rounded-lg"
             />
-            <div className="flex justify-center mt-4">
+            <div className="flex justify-center absolute mt-4">
               {images.map((_, index) => (
                 <span
                   key={index}

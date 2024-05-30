@@ -21,9 +21,9 @@ const Card2 = (props: Card2Props) => {
       <ul className="font-size px-[5px] py-[10px] item-center text-align: justify gap-3 ">
         {listNew.map((news) => (
           <li key={news.id}>
-            <div className="flex gap-10 items-center">
+            <div className="flex gap-5 items-center">
               <div>
-                <img src={news.img} alt="" />
+                <img src={news.img} alt="" className="" />
               </div>
               <div className="gap-10 border-b-2">
                 <div>

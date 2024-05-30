@@ -3,7 +3,7 @@ import Slideshow from "./introductionImage";
 
 function LoginAndImage() {
   return (
-    <div className=" grid grid-col-4 ">
+    <div className=" grid grid-col-4 gap-3 ">
       <div className="flex flex-col col-span-1">
         <Login />
       </div>
