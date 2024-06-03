@@ -86,54 +86,15 @@ const NavBar = () => {
   return (
     <nav className=" flex container mx-auto bg-blue-500 rounded-md  gap-5 ">
       {MENU_LIST.map((menuItem) => (
-        // Option 2
-        // <MenuItem
-        //   key={menuItem.id}
-        //   id={menuItem.id}
-        //   title={menuItem.title}
-        //   link={menuItem.link}
-        //   activeMenuId={activeMenuId}
-        //   subMenuList={menuItem.subMenuList}
-        //   handleMenuClick={handleMenuClick}
-        // />
-
-        // Option 1
-
-        <div key={menuItem.id} className="relative inline-block text-left">
-          <div>
-            <button
-              type="button"
-              className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-              id="menu-button"
-              onClick={() => handleMenuClick(menuItem.id)}
-            >
-              {menuItem.link ? (
-                <a href={menuItem.link}>{menuItem.title}</a>
-              ) : (
-                <p>{menuItem.title}</p>
-              )}
-            </button>
-          </div>
-
-          {menuItem.subMenuList &&
-            menuItem.subMenuList.length > 0 &&
-            activeMenuId === menuItem.id && (
-              <div className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                <div className="py-1">
-                  {menuItem.subMenuList.map((subMenuItem) => (
-                    <a
-                      key={subMenuItem.id}
-                      href={subMenuItem.link}
-                      className="text-gray-700 block px-4 py-2 text-sm"
-                      id={subMenuItem.id.toString()}
-                    >
-                      {subMenuItem.title}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
-        </div>
+        <MenuItem
+          key={menuItem.id}
+          id={menuItem.id}
+          title={menuItem.title}
+          link={menuItem.link}
+          activeMenuId={activeMenuId}
+          subMenuList={menuItem.subMenuList}
+          handleMenuClick={handleMenuClick}
+        />
       ))}
     </nav>
   );
@@ -141,53 +102,51 @@ const NavBar = () => {
 
 export default NavBar;
 
-// For Option 2 - File: MenuItem.tsx
+interface MenuItemProps {
+  id: number;
+  title: string;
+  link?: string;
+  activeMenuId?: number | null;
+  handleMenuClick: (menuId: number) => void;
+  subMenuList?: {
+    id: number;
+    title: string;
+    link: string;
+  }[];
+}
 
-// interface MenuItemProps {
-//   id: number;
-//   title: string;
-//   link?: string;
-//   activeMenuId?: number | null;
-//   handleMenuClick: (menuId: number) => void;
-//   subMenuList?: {
-//     id: number;
-//     title: string;
-//     link: string;
-//   }[];
-// }
+const MenuItem = (props: MenuItemProps) => {
+  const { id, title, link, activeMenuId, subMenuList, handleMenuClick } = props;
 
-// const MenuItem = (props: MenuItemProps) => {
-//   const { id, title, link, activeMenuId, subMenuList, handleMenuClick } = props;
+  return (
+    <div className="relative inline-block text-left">
+      <div>
+        <button
+          type="button"
+          className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+          id="menu-button"
+          onClick={() => handleMenuClick(id)}
+        >
+          {link ? <a href={link}>{title}</a> : <p>{title}</p>}
+        </button>
+      </div>
 
-//   return (
-//     <div className="relative inline-block text-left">
-//       <div>
-//         <button
-//           type="button"
-//           className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-//           id="menu-button"
-//           onClick={() => handleMenuClick(id)}
-//         >
-//           {link ? <a href={link}>{title}</a> : <p>{title}</p>}
-//         </button>
-//       </div>
-
-//       {subMenuList && subMenuList.length > 0 && id === activeMenuId && (
-//         <div className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-//           <div className="py-1">
-//             {subMenuList.map((subMenuItem) => (
-//               <a
-//                 key={subMenuItem.id}
-//                 href={subMenuItem.link}
-//                 className="text-gray-700 block px-4 py-2 text-sm"
-//                 id={subMenuItem.id.toString()}
-//               >
-//                 {subMenuItem.title}
-//               </a>
-//             ))}
-//           </div>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
+      {subMenuList && subMenuList.length > 0 && id === activeMenuId && (
+        <div className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div className="py-1">
+            {subMenuList.map((subMenuItem) => (
+              <a
+                key={subMenuItem.id}
+                href={subMenuItem.link}
+                className="text-gray-700 block px-4 py-2 text-sm"
+                id={subMenuItem.id.toString()}
+              >
+                {subMenuItem.title}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
