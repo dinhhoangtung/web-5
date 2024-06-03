@@ -29,7 +29,7 @@ const Slideshow: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col  content-center min-h-screen bg-gray-100">
+    <div className="flex flex-col  content-center min-h-full bg-gray-100">
       <div className="relative w-full max-w-2xl ">
         {images.map((image, index) => (
           <div
@@ -43,7 +43,7 @@ const Slideshow: React.FC = () => {
               alt={`Slide ${index + 1}`}
               className="w-full h-auto rounded-lg"
             />
-            <div className="flex justify-center absolute mt-4">
+            <div className="flex justify-center absolute inset-0 bottom-0 mt-4">
               {images.map((_, index) => (
                 <span
                   key={index}

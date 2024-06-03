@@ -2,15 +2,21 @@ import Content from "./components/MainCard/Content";
 import Header from "./components/Header/Header";
 import NavBar from "./components/MainNavBar/NavBar";
 
-import LoginAndImage from "./components/Login & image/Login&Image";
+import LoginAndCard from "./components/Login & Card/Login&Card";
 
 function App() {
   return (
     <div>
       <Header />
       <NavBar />
-      <LoginAndImage />
-      <Content />
+      <div className="grid grid-cols-4">
+        <div className="col-span-1">
+          <LoginAndCard />
+        </div>
+        <div className="col-span-4">
+          <Content />
+        </div>
+      </div>
     </div>
   );
 }
