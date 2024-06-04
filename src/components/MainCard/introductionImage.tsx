@@ -43,7 +43,7 @@ const Slideshow: React.FC = () => {
               alt={`Slide ${index + 1}`}
               className="w-full h-auto rounded-lg"
             />
-            <div className="flex justify-center absolute inset-0 bottom-0 mt-4">
+            <div className="flex justify-center absolute bottom-[0%] mt-4">
               {images.map((_, index) => (
                 <span
                   key={index}
