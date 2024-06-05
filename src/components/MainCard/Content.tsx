@@ -1,5 +1,5 @@
 import Card2 from "./Card2";
-import Slideshow from "./introductionImage";
+import IntroImage from "./introductionImage";
 
 const MOCK_DATA_Card2 = [
   {
@@ -52,19 +52,12 @@ const MOCK_DATA_Card2 = [
 const Content = () => {
   return (
     <>
-      <div className="">
-        <div className="container mx-auto ">
-          <div className="  ">
-            <div>
-              <Slideshow />
-            </div>
-            <div className="">
-              <Card2
-                titleNew="PHÒNG DỮ LIỆU & CNTT"
-                listNew={MOCK_DATA_Card2}
-              />
-            </div>
-          </div>
+      <div className=" mx-auto w-full">
+        <div className="gap-5">
+          <IntroImage />
+        </div>
+        <div className="mx-auto ">
+          <Card2 titleNew="PHÒNG DỮ LIỆU & CNTT" listNew={MOCK_DATA_Card2} />
         </div>
       </div>
     </>

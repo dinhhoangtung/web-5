@@ -1,7 +1,7 @@
 const Header = () => {
   return (
-    <header className="bg-white ">
-      <div className="container mx-auto">
+    <header className="bg-white  ">
+      <div className=" mx-auto">
         <nav
           className="mx-auto flex max-w-7xl  p-12 lg:px-8 items-center"
           aria-label="Global"

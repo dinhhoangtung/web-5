@@ -12,12 +12,12 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className=" p-5 flex items-center justify-center  border-slate-950">
+    <div className=" p-3 flex items-center justify-center  border-slate-950">
       <div className="bg-white border-slate-950 rounded-lg shadow-lg w-96">
-        <div className="border flex p-3 bg-gradient-to-r from-slate-300 to-white">
-          <h2 className="pl-3 text-2xl font-bold  text-blue-500">Đăng nhập</h2>
+        <div className="border flex p-1 bg-gradient-to-r from-slate-300 to-white">
+          <h2 className="text-2xl font-bold  text-blue-500">Đăng nhập</h2>
         </div>
-        <form onSubmit={handleSubmit} className="p-8">
+        <form onSubmit={handleSubmit} className="p-3">
           <div className="mb-4 ">
             <label
               className="block font-sans text-sm font-bold text-[#333] mb-2"

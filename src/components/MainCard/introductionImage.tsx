@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 
 const images = [
@@ -15,6 +15,7 @@ const images = [
 
 const IntroImage = () => {
   const [activeImage, setActiveImage] = useState(0);
+  // Click Next
   const handleClickNext = () => {
     const nextImage = activeImage + 1;
     if (nextImage >= images.length) {
@@ -23,7 +24,7 @@ const IntroImage = () => {
       setActiveImage(activeImage);
     }
   };
-
+  // Click Back
   const handleClickPrevios = () => {
     const nextImage = activeImage - 1;
     if (nextImage < 0) {
@@ -32,30 +33,51 @@ const IntroImage = () => {
       setActiveImage(activeImage);
     }
   };
+  // Click Navigate
+  const handleClickNegavite = (index: number) => {
+    setActiveImage(index);
+  };
 
   return (
-    <div>
-      <div>
+    <div className="relative ">
+      <div className="relative w-[892px] h-[302px] ">
         {images.map((item, index) => (
           <div
             key={index}
-            className='absolute opacity-${activeImageID === images.id ? "100" : "0"}'
+            className={`absolute opacity-${
+              activeImage === index ? "100" : "0"
+            } transaction-all duration-500 `}
           >
-            <img src={item} alt="" /> {""}
+            <img src={item} /> {""}
           </div>
         ))}
-      </div>
-      <div
-        className="absolute top-[50%] translate-y-[50%] text-black right-0"
-        onClick={handleClickNext}
-      >
-        <GoChevronRight />
-      </div>
-      <div
-        className="absolute top-[50%] translate-y-[50%] text-black left-0"
-        onClick={handleClickPrevios}
-      >
-        <GoChevronLeft />
+        <div>
+          {" "}
+          {/* Click Next */}
+          <div
+            className="absolute text-[50px] top-[50%]  translate-y-[-50%] cursor-pointer text-red-800 right-0"
+            onClick={handleClickNext}
+          >
+            <GoChevronRight />
+          </div>
+          {/* Click back */}
+          <div
+            className="absolute text-[50px] top-[50%] translate-y-[-50%] cursor-pointer text-red-800 left-0"
+            onClick={handleClickPrevios}
+          >
+            <GoChevronLeft />
+          </div>
+          {/* Button negative */}
+          <div className="absolute flex gap-2 cursor-pointer  bottom-[5px] right-[5px]">
+            {images.map((_item, index) => (
+              <div
+                key={index}
+                className="w-[10px] h-[10px] rounded-full bg-slate-500"
+                onClick={() => handleClickNegavite(index)}
+              ></div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -6,14 +6,14 @@ import LoginAndCard from "./components/Login & Card/Login&Card";
 
 function App() {
   return (
-    <div>
+    <div className="container w-[1190px] ">
       <Header />
       <NavBar />
       <div className="grid grid-cols-4">
         <div className="col-span-1">
           <LoginAndCard />
         </div>
-        <div className="col-span-4">
+        <div className="col-span-3">
           <Content />
         </div>
       </div>

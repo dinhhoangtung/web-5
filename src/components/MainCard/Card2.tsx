@@ -14,7 +14,7 @@ export interface Card2Props {
 const Card2 = (props: Card2Props) => {
   const { titleNew, listNew } = props;
   return (
-    <div className="rounded-lg shadow-xl border border-gray-400 border-b-4  gap-7 items-center">
+    <div className="rounded-lg shadow-xl border border-gray-400 border-b-4  gap-7 ">
       <h2 className="text-[13px] font-bold text-[#08c] py-[10px] px-[15px] bg-gradiant-to- r from-slate-600 to-white rounded-t-lg border border-gray-400">
         {titleNew}
       </h2>
