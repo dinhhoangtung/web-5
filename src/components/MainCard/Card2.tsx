@@ -21,15 +21,15 @@ const Card2 = (props: Card2Props) => {
       <ul className="font-size px-[5px] py-[10px] item-center text-align: justify gap-3 ">
         {listNew.map((news) => (
           <li key={news.id}>
-            <div className="flex gap-5 items-center">
-              <div>
-                <img src={news.img} alt="" className="" />
+            <div className="grid grid-cols-4 gap-3  items-center">
+              <div className="col-span-1 w-full">
+                <img src={news.img} alt="" className=" rounded-md" />
               </div>
-              <div className="gap-10 border-b-2">
+              <div className="gap-10 border-b-2 col-span-3">
                 <div>
                   <a
                     href="{news.link}"
-                    className="text-[#08c] text-align: center font-sans text-sm  hover:underline "
+                    className=" text-[#08c] text-align: center font-sans text-sm  hover:underline hover:text-blue-700 "
                   >
                     {news.nameNews}
                   </a>

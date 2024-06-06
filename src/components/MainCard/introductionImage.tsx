@@ -15,22 +15,24 @@ const images = [
 
 const IntroImage = () => {
   const [activeImage, setActiveImage] = useState(0);
+
   // Click Next
   const handleClickNext = () => {
     const nextImage = activeImage + 1;
     if (nextImage >= images.length) {
       setActiveImage(0);
     } else {
-      setActiveImage(activeImage);
+      setActiveImage(nextImage);
     }
   };
+
   // Click Back
   const handleClickPrevios = () => {
-    const nextImage = activeImage - 1;
-    if (nextImage < 0) {
+    const previosImage = activeImage - 1;
+    if (previosImage < 0) {
       setActiveImage(images.length - 1);
     } else {
-      setActiveImage(activeImage);
+      setActiveImage(previosImage);
     }
   };
   // Click Navigate
@@ -39,7 +41,7 @@ const IntroImage = () => {
   };
 
   return (
-    <div className="relative ">
+    <div className="relative py-3 ">
       <div className="relative w-[892px] h-[302px] ">
         {images.map((item, index) => (
           <div
@@ -52,17 +54,16 @@ const IntroImage = () => {
           </div>
         ))}
         <div>
-          {" "}
           {/* Click Next */}
           <div
-            className="absolute text-[50px] top-[50%]  translate-y-[-50%] cursor-pointer text-red-800 right-0"
+            className="absolute text-[50px] top-[50%] font-sans text-6xl translate-y-[-50%] cursor-pointer text-slate-600 right-0 hover:text-blue-500"
             onClick={handleClickNext}
           >
             <GoChevronRight />
           </div>
           {/* Click back */}
           <div
-            className="absolute text-[50px] top-[50%] translate-y-[-50%] cursor-pointer text-red-800 left-0"
+            className="absolute text-[50px] top-[50%] font-sans text-6xl translate-y-[-50%] cursor-pointer text-slate-600 left-0 hover:text-blue-500"
             onClick={handleClickPrevios}
           >
             <GoChevronLeft />

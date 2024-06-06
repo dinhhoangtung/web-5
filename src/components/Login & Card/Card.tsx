@@ -14,7 +14,7 @@ const Card = (props: CardProps) => {
   const { title, list } = props;
 
   return (
-    <div className="rounded-lg shadow-xl border border-gray-400  gap-5 items-center ">
+    <div className="rounded-lg shadow-xl border border-gray-400  gap-5 p-3 items-center ">
       <h2 className="text-[13px] font-bold text-[#08c] py-[10px] px-[15px] bg-gradiant-to- r from-slate-600 to-white rounded-t-lg border border-gray-400">
         {title}
       </h2>

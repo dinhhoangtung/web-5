@@ -130,7 +130,7 @@ function LoginAndCard() {
       <div className=" ">
         <Login />
       </div>
-      <div className="  ">
+      <div className=" p-3 ">
         <Card title="HƯỚNG DẪN - THỦ THUẬT" list={transformedData} />
         <Card title="TIN TỨC CNTT" list={transformedData2} />
         <Card title="LIÊN KẾT WEBSITE" list={transformedData3} />
