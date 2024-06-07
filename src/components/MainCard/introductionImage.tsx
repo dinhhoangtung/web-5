@@ -50,16 +50,16 @@ const IntroImage = () => {
               activeImage === index ? "100" : "0"
             } transaction-all duration-500 `}
           >
-            <img src={item} /> {""}
+            <img src={item} />
           </div>
         ))}
         <div>
           {/* Click Next */}
-          <div
-            className="absolute text-[50px] top-[50%] font-sans text-6xl translate-y-[-50%] cursor-pointer text-slate-600 right-0 hover:text-blue-500"
-            onClick={handleClickNext}
-          >
-            <GoChevronRight />
+          <div>
+            <GoChevronRight
+              className="absolute text-[50px] top-[50%] font-sans text-6xl translate-y-[-50%] cursor-pointer text-slate-600 right-0 hover:text-blue-500"
+              onClick={handleClickNext}
+            />
           </div>
           {/* Click back */}
           <div
@@ -68,12 +68,15 @@ const IntroImage = () => {
           >
             <GoChevronLeft />
           </div>
+
           {/* Button negative */}
           <div className="absolute flex gap-2 cursor-pointer  bottom-[5px] right-[5px]">
             {images.map((_item, index) => (
               <div
                 key={index}
-                className="w-[10px] h-[10px] rounded-full bg-slate-500"
+                className={`w-[10px] h-[10px] rounded-full-${
+                  index === activeImage ? "bg-blue-500" : "bg-white"
+                } `}
                 onClick={() => handleClickNegavite(index)}
               ></div>
             ))}
