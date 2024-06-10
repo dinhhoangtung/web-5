@@ -6,7 +6,7 @@ import LoginAndCard from "./components/Login & Card/Login&Card";
 
 function App() {
   return (
-    <div className="container w-[1190px] ">
+    <div className="container mx-auto w-[1190px] ">
       <Header />
       <NavBar />
       <div className="grid grid-cols-4">

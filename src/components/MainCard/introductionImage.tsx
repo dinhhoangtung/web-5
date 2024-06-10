@@ -24,6 +24,7 @@ const IntroImage = () => {
     } else {
       setActiveImage(nextImage);
     }
+    console.log(nextImage);
   };
 
   // Click Back
@@ -46,8 +47,8 @@ const IntroImage = () => {
         {images.map((item, index) => (
           <div
             key={index}
-            className={`absolute opacity-${
-              activeImage === index ? "100" : "0"
+            className={`absolute ${
+              activeImage === index ? "opacity-100" : "opacity-0"
             } transaction-all duration-500 `}
           >
             <img src={item} />
@@ -57,8 +58,8 @@ const IntroImage = () => {
           {/* Click Next */}
           <div>
             <GoChevronRight
-              className="absolute text-[50px] top-[50%] font-sans text-6xl translate-y-[-50%] cursor-pointer text-slate-600 right-0 hover:text-blue-500"
-              onClick={handleClickNext}
+              className="absolute opacity-100 text-[50px] top-[50%] font-sans text-6xl translate-y-[-50%] cursor-pointer text-slate-600 right-0 hover:text-blue-500"
+              onClick={() => handleClickNext()}
             />
           </div>
           {/* Click back */}
@@ -74,9 +75,9 @@ const IntroImage = () => {
             {images.map((_item, index) => (
               <div
                 key={index}
-                className={`w-[10px] h-[10px] rounded-full-${
+                className={`w-[10px] h-[10px] rounded-full ${
                   index === activeImage ? "bg-blue-500" : "bg-white"
-                } `}
+                }  `}
                 onClick={() => handleClickNegavite(index)}
               ></div>
             ))}
