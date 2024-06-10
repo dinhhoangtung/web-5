@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 
 const images = [
@@ -41,6 +41,14 @@ const IntroImage = () => {
     setActiveImage(index);
   };
 
+  //Set time
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveImage((preImage) => (preImage + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="relative py-3 ">
       <div className="relative w-[892px] h-[302px] ">
@@ -51,15 +59,15 @@ const IntroImage = () => {
               activeImage === index ? "opacity-100" : "opacity-0"
             } transaction-all duration-500 `}
           >
-            <img src={item} />
+            <img src={item} alt={`Slide ${index + 1}`} />
           </div>
         ))}
         <div>
           {/* Click Next */}
           <div>
             <GoChevronRight
-              className="absolute opacity-100 text-[50px] top-[50%] font-sans text-6xl translate-y-[-50%] cursor-pointer text-slate-600 right-0 hover:text-blue-500"
-              onClick={() => handleClickNext()}
+              className="absolute text-[50px] top-[50%] font-sans text-6xl translate-y-[-50%] cursor-pointer text-slate-600 right-0 hover:text-blue-500"
+              onClick={handleClickNext}
             />
           </div>
           {/* Click back */}
@@ -77,7 +85,7 @@ const IntroImage = () => {
                 key={index}
                 className={`w-[10px] h-[10px] rounded-full ${
                   index === activeImage ? "bg-blue-500" : "bg-white"
-                }  `}
+                } `}
                 onClick={() => handleClickNegavite(index)}
               ></div>
             ))}
