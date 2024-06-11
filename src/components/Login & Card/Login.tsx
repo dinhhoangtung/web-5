@@ -19,7 +19,7 @@ const Login: React.FC = () => {
         <div className="rounded-t-lg flex p-3 bg-gradient-to-r from-slate-300 to-slate-100">
           <h2 className="pl-3 text-xl font-bold  text-blue-500">Đăng nhập</h2>
         </div>
-        <form onSubmit={handleSubmit} className="p-3">
+        <form onSubmit={handleSubmit} className="p-3 pr-8">
           <div className="mb-4 ">
             <label
               className="block font-sans text-sm font-bold text-[#333] mb-2"
@@ -33,7 +33,7 @@ const Login: React.FC = () => {
                 id="name"
                 value={name}
                 onChange={(e) => setname(e.target.value)}
-                className=" w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-200 border-slate-500"
+                className=" w-full h-auto px-3 pl-5 border rounded-md focus:outline-none focus:ring focus:ring-blue-200 border-slate-500"
                 required
               />
               <ImUser className="absolute pl-1 left-[1px] top-[50%]  translate-y-[-50%] cursor-pointer text-blue-500" />
@@ -55,7 +55,7 @@ const Login: React.FC = () => {
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-200 border-slate-500"
+                className="w-full px-3 pl-5 border rounded-md focus:outline-none focus:ring focus:ring-blue-200 border-slate-500"
                 required
               />
               <FaKey className="absolute pl-1 left-[1px] top-[50%]   translate-y-[-50%] cursor-pointer text-blue-500" />

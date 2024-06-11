@@ -17,6 +17,11 @@ function App() {
           <Content />
         </div>
       </div>
+      <div>
+        <div className="rounded-md flex justify-center text-[#555] bg-slate-300 text-[13px] font-sans line-height: 1.75rem py-[20px]">
+          Copyright © 2016 Phòng Dữ Liệu & CNTT.
+        </div>
+      </div>
     </div>
   );
 }

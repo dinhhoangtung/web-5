@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { GoTriangleDown } from "react-icons/go";
+
 const Item_List = [
   {
     id: 1,
@@ -50,7 +52,23 @@ const Item_List = [
   {
     id: 4,
     title: "Tin tức CNTT",
-    link: "/",
+    subMenuList: [
+      {
+        id: 15,
+        title: "Trong nước",
+        link: "/trong-nuoc",
+      },
+      {
+        id: 16,
+        title: "Quốc tế",
+        link: "/quoc-te",
+      },
+      {
+        id: 17,
+        title: "Bài viết hay",
+        link: "/bai-viet-hay",
+      },
+    ],
   },
   {
     id: 5,
@@ -59,13 +77,50 @@ const Item_List = [
   },
   {
     id: 6,
-    title: "Tài liệu ",
-    link: "/",
+    title: "Tài liệu",
+    subMenuList: [
+      {
+        id: 18,
+        title: "Quy định - Quy chế",
+        link: "/quy-dinh",
+      },
+      {
+        id: 19,
+        title: "Quy trình",
+        link: "/quy-trinh",
+      },
+      {
+        id: 20,
+        title: "Biểu mẫu",
+        link: "/bieu-mau",
+      },
+    ],
   },
   {
     id: 7,
     title: "Thủ thuật",
-    link: "/",
+    subMenuList: [
+      {
+        id: 21,
+        title: "Window",
+        link: "/window",
+      },
+      {
+        id: 22,
+        title: "Linux",
+        link: "/linux",
+      },
+      {
+        id: 23,
+        title: "Mac",
+        link: "/Mac",
+      },
+      {
+        id: 24,
+        title: "Khác",
+        link: "/khac",
+      },
+    ],
   },
   {
     id: 8,
@@ -97,7 +152,12 @@ const NavBar = () => {
               {itemItem.link ? (
                 <a href={itemItem.link}>{itemItem.title}</a>
               ) : (
-                <p>{itemItem.title}</p>
+                <p className="flex">
+                  {itemItem.title}
+                  <div>
+                    <GoTriangleDown className="justify-center" />
+                  </div>
+                </p>
               )}
             </button>
           </div>
